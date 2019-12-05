@@ -27,7 +27,23 @@ li a {
 li a:hover {
   background-color: #111;
 }
+    h1 {
+      font-family: "Lucida Console";
+      font-size: 20pt;
+    }
+    p {
+      font-family: "Lucida Console";
+      font-size: 20pt;
+    }
 </style>
+  <script type="text/javascript">
+    var newsis = false;
+    var news = document.getElementById("news");
+    if (newsis == false) {
+      news.innerHTML = "If we have any news, it will pop up here!";
+      news.hidden = "";
+    }
+  </script>
 </head>
 <body class="parallax">
   <ul>
@@ -38,5 +54,6 @@ li a:hover {
   <li><a href="about.html">About</a></li>
    <li><span style="color: white;"> INDEX.ISH <span></li> 
 </ul>
+     <p id="news" hidden="hidden">If we have any news, it will be here</p>
 </body>
   </html>
