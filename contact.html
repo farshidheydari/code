@@ -60,13 +60,10 @@ li a:hover {
 function myFunction() {
   var copyText = document.getElementById("txtc");
   copyText.select();
-  copyText.setSelectionRange(0, 99999);
+  copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
-  
- 
- }
-
-
+  alert("email was copied");
+}
 </script>
       </body>
   </html>
