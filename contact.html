@@ -46,10 +46,6 @@ button{
 li a:hover {
   background-color: #111;
 }
-button:active {
-    outline: none;
-    border: none;
-}
    
 </style>
 </head>
@@ -73,7 +69,7 @@ button:active {
         <li><a>itays email:</a><a id="txti">igodasevich@ishamburg.org </a></li>
      <li><button id="ce">copy carls email</button><button id="ie">copy itays email</button></li>
     <ul>
-	    <div style="visibility: hidden" id="note"><li><a>email copied</a><button>ok</button><<li></div>
+	    <div style="visibility: hidden" id="note"><li><a>email copied</a></li></div>
       <script>
 document.getElementById("ce").addEventListener("click", function() {
     copyToClipboard(document.getElementById("txtc"));
@@ -189,9 +185,16 @@ function copyToClipboard(elem) {
 
 </script>
 	    <script>
+		    
+		    
+		    var notis = document.getElementById("note");
 		    function noteOn (){
-			    var notis = document.getElementById("note")
+			   
 			    notis.style.visibility = "visible";
+			    setInterval(hide, 3000)
+		    }
+		    function hide () {
+			  notis.style.visibility = "hidden";  
 		    }
 			    
 			    
