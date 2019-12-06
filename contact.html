@@ -28,9 +28,6 @@
 li {
   float: left;
 }
-	  li h1, h1 {
-		  font-family: "Lucida Console";
-	  }
 li a {
   display: block;
   color: white;
@@ -109,6 +106,7 @@ function copyToClipboard(elem) {
     var succeed;
     try {
     	  succeed = document.execCommand("copy");
+	    alert("email copied")
     } catch(e) {
         succeed = false;
     }
@@ -165,6 +163,7 @@ function copyToClipboard(elem) {
     var succeed;
     try {
     	  succeed = document.execCommand("copy");
+	  alert("email copied")
     } catch(e) {
         succeed = false;
     }
