@@ -107,7 +107,7 @@ function copyToClipboard(elem) {
     var succeed;
     try {
     	  succeed = document.execCommand("copy");
-	    alert("Email copied!!!")
+	    noteOn()
     } catch(e) {
         succeed = false;
     }
@@ -164,7 +164,7 @@ function copyToClipboard(elem) {
     var succeed;
     try {
     	  succeed = document.execCommand("copy");
-	  alert("email copied")
+	  noteOn()
     } catch(e) {
         succeed = false;
     }
@@ -185,9 +185,10 @@ function copyToClipboard(elem) {
 
 </script>
 	    <script>
-		    function noteOn (){
+		    function noteOn(){
 			    var notis = document.getElementById("note")
 			    notis.style.display("block")
+		    }
 			    
 			    
 	    </script>
