@@ -77,9 +77,7 @@ li a:hover {
 	    
 	    <audio id="conferm">
   
-  <source src="confermed.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  
 	    
 	    
 	    
@@ -201,18 +199,19 @@ function copyToClipboard(elem) {
 		    
 		    
 		    var notis = document.getElementById("note");
-		    var co = document.getElementById("conferm");
+		    var audio = new Audio('confermed.mp3');
+
 		    
 		    function noteOn (){
 			   
 			    notis.style.visibility = "visible";
-			    co.autoplay;
+			    audio.play();
 			    setInterval(hide, 3000)
 			    
 		    }
 		    function hide () {
 			  notis.style.visibility = "hidden";
-			    co.muted;
+			    
 		    }
 			    
 			    
