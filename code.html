@@ -1,1 +1,102 @@
+<html><head>
+  <title>Index.ish</title>
+ <!-- added icon to the website -->
+ <link rel="shortcut icon" href="fixed.png" type="image/x-icon">
+  <style>
+    span {
+   font-family: "Lucida Console";
+    font-size: 30pt;
+    }
+     ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #005a96;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+body {
+  text-align: center;
+}
 
+textarea {
+  width: 32%;
+  float: top;
+  min-height: 250px;
+  overflow: scroll;
+  margin: auto;
+  display: inline-block;
+  background: #f4f4f9;
+  outline: none;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+}
+
+iframe {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 35em;
+}
+</style>
+</head>
+<body class="parallax">
+  <ul>
+  <li><img src="fixed.png" width="50" height="50"></li>
+  <li><a href="https://index-ish.github.io/code/">Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+   <li><span style="color: white;"> INDEX.ISH <span></li>
+     
+</ul>
+     <br>
+     <br>
+     <br>
+     <ul>
+       <li>
+         <textarea id="html" placeholder="HTML"></textarea>
+      <textarea id="css" placeholder="CSS"></textarea>
+      <textarea id="js" placeholder="JavaScript"></textarea>
+      <iframe id="code"></iframe>
+         <li>
+           <ul>
+
+      <script type="text/javascript">
+             function compile() {
+  var html = document.getElementById("html");
+  var css = document.getElementById("css");
+  var js = document.getElementById("js");
+  var code = document.getElementById("code").contentWindow.document;
+
+  document.body.onkeyup = function() {
+    code.open();
+    code.writeln(
+      html.value +
+        "<style>" +
+        css.value +
+        "</style>" +
+        "<script>" +
+        js.value +
+        "</script>"
+    );
+    code.close();
+  };
+}
+
+compile();</script>
+
+</body>
+  </html>
