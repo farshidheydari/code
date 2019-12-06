@@ -69,7 +69,7 @@ li a:hover {
         <li><a>itays email:</a><a id="txti">igodasevich@ishamburg.org </a></li>
      <li><button id="ce">copy carls email</button><button id="ie">copy itays email</button></li>
     <ul>
-	    <div hidden id="note"><li><a>email copied</a><button>ok</button><<li></div>
+	    <div hidden="hidden" id="note"><li><a>email copied</a><button>ok</button><<li></div>
       <script>
 document.getElementById("ce").addEventListener("click", function() {
     copyToClipboard(document.getElementById("txtc"));
@@ -107,7 +107,7 @@ function copyToClipboard(elem) {
     var succeed;
     try {
     	  succeed = document.execCommand("copy");
-	    noteOn()
+	    noteOn();
     } catch(e) {
         succeed = false;
     }
@@ -164,7 +164,7 @@ function copyToClipboard(elem) {
     var succeed;
     try {
     	  succeed = document.execCommand("copy");
-	  noteOn()
+	  noteOn();
     } catch(e) {
         succeed = false;
     }
