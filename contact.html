@@ -74,6 +74,15 @@ li a:hover {
      <li><button id="ce">Copy Carl's Email</button><button id="ie">Copy Itay's Email</button></li>
     <ul>
 	    <div style="visibility: hidden" id="note"><li><a>Email Copied to Clipboard!</a></li></div>
+	    
+	    <audio id="conferm">
+  
+  <source src="confermed.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+	    
+	    
+	    
       <script>
 document.getElementById("ce").addEventListener("click", function() {
     copyToClipboard(document.getElementById("txtc"));
@@ -192,13 +201,18 @@ function copyToClipboard(elem) {
 		    
 		    
 		    var notis = document.getElementById("note");
+		    var co = document.getElementById("conferm");
+		    
 		    function noteOn (){
 			   
 			    notis.style.visibility = "visible";
+			    co.autoplay;
 			    setInterval(hide, 3000)
+			    
 		    }
 		    function hide () {
-			  notis.style.visibility = "hidden";  
+			  notis.style.visibility = "hidden";
+			    co.muted;
 		    }
 			    
 			    
