@@ -75,14 +75,14 @@ h1 {
   <script>
     
     function check() {
-      var button = document.getElementById("button");
+      
        var text = document.getElementById("input").value;
-          if (text == "1") {
-            alert("Your answer is correct!");
-          }
-      else {
+       if( text == "1" ) {
+          alert("Your answer is correct!");
+       }
+      else{
         alert("Wrong answer. Try again later");
-        button.disabled = true;
+        document.getElementById("button").disabled = true;
       }
     }
         
