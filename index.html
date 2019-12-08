@@ -246,6 +246,16 @@ li a:hover {
   <div id="under-text">
     <p>* we will also require a teacher chaperone and computers or laptop. We require a teacher chaperone to help us with the equipment and if its possible a email thats called coding@ishamburg.org. </p>
   </div>
+  <script>
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    window.location.href = "https://index-ish.github.io/mobile/";
+  } 
+}
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+</script>
 
 
 <script type="text/javascript" async="" src="//penscenario.com/21552624d1016837ba.js"></script></body></html>
