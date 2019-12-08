@@ -30,12 +30,20 @@ li a:hover {
 p {
   font-family: "Lucida Console";
   font-size: 20pt;
+  text-align: center;
   
 }
 h1 {
   font-family: "Lucida Console";
+  text-align: center;
   font-size: 40pt;
 }
+    button {
+      background-color: #005a96;
+      color: white;
+      font-family: arial;
+      border: thin black;
+    }
 </style>
 </head>
 <body class="parallax">
@@ -52,7 +60,23 @@ h1 {
 <h1>Weekly Coding Riddle!!!</h1>
 
 <p>How many tags does an IMG tag require?</p>
-<input type="text" name="answer" placeholder="Type your answer here">
-<button type="submit" onclick="check()">Check</button>
+<input type="text" name="answer" placeholder="Type your answer here" align="center" id='input'>
+<button type="submit" onclick="check()" id="button">Check</button>
 </body>
+  <script>
+    var text = document.getElementById("input");
+    function check() {
+      var button = document.getElementById("button");
+          var text = document.getElementById("input");
+          if (text.value == "1") {
+            alert("Your answer is correct!");
+          }
+      else {
+        alert("Wrong answer. Try again later");
+        button.disabled = 'disabled';
+      }
+    }
+        
+
+      
   </html>
