@@ -47,6 +47,10 @@ h1 {
     label {
       text-align: center;
     }
+    input {
+      width: 100%;
+      
+    }
 </style>
 </head>
 <body class="parallax">
@@ -63,16 +67,16 @@ h1 {
 <h1>Weekly Coding Riddle!!!</h1>
 
 <p>How many tags does an IMG tag require?</p>
-     <label for="answer" style="visibility: hidden;">HIDDEN</label>
+     
 <input type="text" name="answer" placeholder="Type your answer here" id='input'>
-     <br>
+    
 <button type="submit" onclick="check()" id="button">Check</button>
 </body>
   <script>
     
     function check() {
       var button = document.getElementById("button");
-       var text = document.getElementById("input").value;;
+       var text = document.getElementById("input").value;
           if (text == "1") {
             alert("Your answer is correct!");
           }
