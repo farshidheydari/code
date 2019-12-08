@@ -28,6 +28,13 @@
 li {
   float: left;
 }
+    button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 li a {
   display: block;
   color: white;
@@ -110,8 +117,6 @@ h1 {
       else{
         alert("Wrong answer. Try again later");
         
-        document.getElementById("button").style.backgroundcolor = "#e3e2de";
-        document.getElementById("button").style.color = "white";
         document.getElementById("button").disabled = true;
       }
     }
