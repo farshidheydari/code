@@ -44,6 +44,9 @@ h1 {
       font-family: arial;
       border: thin black;
     }
+    label {
+      text-align: center;
+    }
 </style>
 </head>
 <body class="parallax">
@@ -60,20 +63,22 @@ h1 {
 <h1>Weekly Coding Riddle!!!</h1>
 
 <p>How many tags does an IMG tag require?</p>
-<input type="text" name="answer" placeholder="Type your answer here" align="center" id='input'>
+     <label for="answer" style="visibility: hidden;">HIDDEN</label>
+<input type="text" name="answer" placeholder="Type your answer here" id='input'>
+     <br>
 <button type="submit" onclick="check()" id="button">Check</button>
 </body>
   <script>
-    var text = document.getElementById("input");
+    
     function check() {
       var button = document.getElementById("button");
-          var text = document.getElementById("input");
-          if (text.value == "1") {
+       var text = document.getElementById("input").value;;
+          if (text == "1") {
             alert("Your answer is correct!");
           }
       else {
         alert("Wrong answer. Try again later");
-        button.disabled = 'disabled';
+        button.disabled = true;
       }
     }
         
