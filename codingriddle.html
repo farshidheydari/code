@@ -104,17 +104,17 @@ h1 {
     function check() {
       
        var text = document.getElementById("input").value;
-       if( text == "0,") {
+       if( text == "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10," || text== "0,1,2,3,4,5,6,7,8,9,10," || text == "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ") {
           alert("Your answer is correct!");
        }
       else{
         alert("Wrong answer. Try again later");
-        document.getElementById("button").onclick = disabled();
+        document.getElementById("button").disabled = true;
+        document.getElementById("button").style.backgroundcolor = "#e3e2de";
+        document.getElementById("button").style.color = "white";
       }
     }
-    function disabled() {
-      alert("Try again later");
-    }
+    
         
 
   </script>      
