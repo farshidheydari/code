@@ -82,8 +82,11 @@ h1 {
        }
       else{
         alert("Wrong answer. Try again later");
-        document.getElementById("button").disabled = true;
+        document.getElementById("button").onclick = "disabled()";
       }
+    }
+    function disabled() {
+      alert("Try again later");
     }
         
 
