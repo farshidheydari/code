@@ -1,1 +1,96 @@
+<html><head>
+  <title>Index.ish</title>
+ <!-- added icon to the website -->
+ <link rel="shortcut icon" href="fixed.png" type="image/x-icon">
+  <style>
+    span {
+   font-family: "Lucida Console";
+    font-size: 30pt;
+    }
+    .parallax {
+        background-image: url("fixed.png");
+      
+      background-position: right;
+      background-attachment: fixed;
+      background-repeat: no repeat;
+      background-size: 50%;
+    }
+      
+     ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #005a96;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body class="parallax">
+  <ul>
+   <li><a href="https://index-ish.github.io/code"><img src="fixed.png" width="50" height="50" ></a></li>
+  <li><a href="https://index-ish.github.io/code/">Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+     <li><a href="code.html">Code Editor</a></li>
+    <li><a href='codingriddle.html'>Coding Riddle</a></li>
+    <li><a href='sound.html'>Sounds</a></li>
+   <li><span style="color: white;"> INDEX.ISH <span></li> 
+</ul>
+     <ul>
+    <li> <a>Insert Number: </a><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" /></li>
+<li><input type="button" value="Convert!" onclick="dec2bin()" /></li>
+<br><br>
+<li><div id = "result"></div></li>
+    </ul>
 
+<script type = "text/javascript">
+
+function dec2bin() {
+var x = document.getElementById("deci").value;
+if ((/[^0-9]/g.test(x)) || x == "") {
+alert ("You must enter an integer decimal number!");
+document.getElementById("deci").value = "";
+document.getElementById("deci").focus();
+return false;
+}
+x = parseInt(x);
+var bin = x.toString(2);
+var hex = x.toString(16).toUpperCase();
+var octal = x.toString(8);
+
+
+var figs = "The binary representation of " + x + " is " + bin + "<br>";
+figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
+figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
+
+document.getElementById("result").innerHTML = figs;
+}
+</script>
+
+     <!-- redirects you to mobile site if your on a mobile phone -->
+  <script>
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    window.location.href = "https://index-ish.github.io/mobile/";
+  } 
+}
+var x = window.matchMedia("(max-width: 1024px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+</script>
+</body>
+  </html>
