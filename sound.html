@@ -1,1 +1,84 @@
-
+<html><head>
+  <title>Index.ish</title>
+ <!-- added icon to the website -->
+ <link rel="shortcut icon" href="fixed.png" type="image/x-icon">
+  <style>
+    span {
+   font-family: "Lucida Console";
+    font-size: 30pt;
+    }
+    .parallax {
+        background-image: url("fixed.png");
+      
+      background-position: right;
+      background-attachment: fixed;
+      background-repeat: no repeat;
+      background-size: 50%;
+    }
+      
+     ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #005a96;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+audio {
+  background-color: #005a96;
+  
+</style>
+</head>
+<body class="parallax">
+  <ul>
+   <li><a href="https://index-ish.github.io/code"><img src="fixed.png" width="50" height="50" ></a></li>
+  <li><a href="https://index-ish.github.io/code/">Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+     <li><a href="code.html">Code Editor</a></li>
+    <li><a href='codingriddle.html'>Coding Riddle</a></li>
+   <li><span style="color: white;"> INDEX.ISH <span></li> 
+</ul>
+     <br>
+     <br>
+     <br>
+     <br>
+     <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+</audio>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <!-- redirects you to mobile site if your on a mobile phone -->
+  <script>
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    window.location.href = "https://index-ish.github.io/mobile/";
+  } 
+}
+var x = window.matchMedia("(max-width: 1024px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+</script>
+</body>
+  </html>
