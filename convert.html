@@ -23,6 +23,10 @@
   overflow: hidden;
   background-color: #005a96;
 }
+    h1, p {
+      font-family: "Lucida Console";
+      text-align: center;
+    }
 li {
   float: left;
 }
@@ -62,10 +66,11 @@ li a:hover {
      <br>
      <br>
      <ul>
+       <h1>Decimal Number Converter</h1>
        <br>
-<li><input style="margin: 0 auto; "type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" placeholder="type number here" /></li>
+<li><input style="margin: 0 auto; height: 37px;"type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" placeholder="Type number here" /></li>
        
-       <li><button style="background-color: white; border-color: black; margin: 0 auto;"  onclick="dec2bin()" >Convert</button></li>
+       <li><button style="background-color: white; border-color: black; margin: 0 auto; height: 37px;"  onclick="dec2bin()" >Convert</button></li>
 <br><br>
        <li><div style="margin: 0 auto;" id = "result"></div></li>
      </ul>
